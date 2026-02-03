@@ -1,0 +1,263 @@
+/*CSS变量统一管理颜色*/
+:root {
+            --navy-blue: #003366;       /* 海军蓝 - 标题 */
+            --warm-brown: #8b7355;      /* 暖棕色 - 主色 */
+            --gold: #d4af37;            /* 金色 - 强调色 */
+            --light-beige: #f5f1e6;     /* 浅米色 - 背景 */
+            --dark-gray: #555555;       /* 深灰 - 正文 */
+            --medium-beige: #e8dfca;    /* 中米色 - 边框 */
+            --white: #ffffff;
+            --light-brown: #b8a38d;     /* 浅棕色 - 装饰 */
+        }
+
+* {/*通用选择器选择页面所有元素*/
+    margin: 0;/*元素与元素间距离*/
+    padding: 0;/*元素内容与边框之间距离*/
+    box-sizing: border-box;/*让元素的宽度和高度·包含边框和内边框，而不是额外加上去*/
+
+}
+.parent {
+  display: flex;
+  justify-content: center; /* 水平 */
+  align-items: center;     /* 垂直 */
+  height: 50vh; /* 父容器必须有明确高度 */
+}/*flexbox父容器*/
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;/*字体*/
+    line-height: 1.6;/*行高*/
+    color: var(--dark-gray);/*文字颜色*/
+    background-color: var(--light-beige);/*背景颜色*/
+    padding: 30px 20px;/*内边距30px上下20px左右*/
+    background-image: linear-gradient(to right, rgba(245, 241, 230, 0.9), rgba(245, 241, 230, 0.9)),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23b8a38d" opacity="0.05" d="M0,0 L100,0 L100,100 L0,100 Z M20,20 L80,20 L80,80 L20,80 Z"/></svg>');
+}/*ai设置的背景图片*/
+/*主要部分*/
+/*手机*/
+.resume-container {
+    display: flex;              /* 启用 Flexbox */
+    flex-direction: row;        /* 方向：row(横) / column(竖) */
+    justify-content: center;    /* 主轴对齐：center / space-between / space-around */
+    align-items: center;        /* 交叉轴对齐：center / flex-start / flex-end */
+    gap: 20px;                  /* 子元素间距 */
+    flex-wrap: wrap;            /* 换行：wrap / nowrap */
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.15);
+    overflow: hidden;
+    border: 1px solid var(--medium-beige);
+    padding: 15px;
+}
+.item {
+    flex: 1;                    /* 自动分配剩余空间 */
+}
+
+/* 页眉部分 */
+header {
+    background: linear-gradient(135deg, var(--navy-blue) 0%, #7289a1 100%);
+    color: white;/*文字颜色为白色，背景为渐变型蓝色*/
+    padding: 45px 40px 35px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header nav{
+    flex-direction: column;
+    gap:10px;
+}
+.skill-grid{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.name {
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(21, 21, 21, 0.9);
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.summary {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(69, 54, 5, 0.85);
+}
+img {
+    max-width: 100%;    /* 不超过容器宽度 */
+    height: auto;       /* 保持宽高比 */
+    display: block;     /* 去除底部空隙 */
+}
+ /* 导航栏容器 */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 导航内容 - 移动端纵向排列 */
+        .nav-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        /* 品牌Logo/名称 */
+        .nav-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* 导航菜单项容器 */
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 100%;
+            list-style: none;
+        }
+
+        /* 导航链接样式 */
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 500;
+        }
+
+        /* 桌面端样式 - 屏幕宽度大于768px */
+        @media (min-width: 768px) {
+            .nav-content {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .nav-menu {
+                flex-direction: row;
+                width: auto;
+                gap: 0.5rem;
+            }
+
+            .nav-link:hover {
+                transform: translateY(-2px);
+            }
+        }
+@media (min-width: 768px) {
+    .resume-container {
+        padding: 30px;
+    }
+    header nav{
+        flex-direction: row;
+        gap:20px;
+    }
+    .skill-grid{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .skill-item{
+        flex:1 1 45%;
+    }
+}/*根据设备大小调整布局*/
+@media (min-width: 1024px) {
+    .resume-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+    .skill-item{
+        flex:1 1 30%;
+    }
+}/*根据设备大小调整布局*/
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+a{
+    color: #06c;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+a:hover{/*添加悬停效果*/
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* 列表样式 */
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+li::marker {
+    color: var(--warm-brown);
+}
+
+
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--navy-blue);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--medium-beige);
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
