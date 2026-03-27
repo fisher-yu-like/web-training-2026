@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- 宏包加载 ---
+\usepackage[utf8]{inputenc}
+\usepackage{xeCJK}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+ % 处理中文
+
+% --- 样式设置 ---
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\hypersetup{colorlinks=true, urlcolor=blue}
+\pagestyle{empty}
+
+\begin{document}
+
+% --- 个人信息 ---
+\begin{center}
+     {\Huge\CJKfontspec{楷体} \textbf{孙彧} }\\
+    \vspace{5pt}
+    籍贯：吉林省洮南市 | 手机：13251775028| 邮箱：\href{mailto:2055798256@qq.com}{2055798256@qq.com} \\
+    GitHub: \href{https://github.com/fisher-yu-like}{github.com/fisher-yu-like} |生日：2007.03.03
+
+\end{center}
+% --- 教育背景 ---
+\section{教育背景}
+\textbf{中国科学技术大学 } \hfill 2024.09 -- 2028.06 \\
+自动化系 · 本科在读 \hfill GPA: 3.0/ 4.0
+已学课程：数学：线性代数，数学分析，复变函数，随机过程| 专业课： C语言基础，数据结构算法 ，数字电路，模拟电路，自动控制原理(在学)
+英语：六级550+
+% --- 专业技能 ---
+\section{专业技能}
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt]
+    \item \textbf{编程语言}: Python , C/C++, MATLAB,html,css,javascript(初步)
+    \item \textbf{深度学习}: PyTorch 框架, 初步了解 CNN (ResNet), GNN (GCN) 架构。
+    \item \textbf{软件工具}: 熟练掌握AutoCAD,PS,剪映,latex,markdown,sw(初步)
+    \item \textbf{可视化}: Matplotlib, excel, origin
+    \item \textbf{嵌入式}：arduino,STM32(初步了解在学)
+\end{itemize}
+
+% --- 项目经历 ---
+\section{项目经历}
+
+\textbf{一、基于残差学习（ResNet）的图像分类系统复现} \hfill \textbf{代码复现} \\
+\textit{一周} \hfill 最近
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{核心实现}: 基于 PyTorch 从底层构建 \texttt{BasicBlock}，实现 \textbf{Identity Shortcut} 机制，解决了深层网络训练中的梯度消失问题。
+    \item \textbf{工程优化}: 引入 \textbf{BatchNorm} 与 \textbf{全局平均池化 (GAP)}，在保持特征提取能力的同时显著压缩了全连接层参数量。
+    \item \textbf{实验对比}: 设计消融实验，定量分析了不同残差块数量（1至5层）对 CIFAR-10 数据集收敛速度及 Loss 下降曲线的影响。
+    \item \textbf{环境兼容}: 配置环境出现与包不兼容问题（\texttt{VisibleDeprecationWarning}）。
+\end{itemize}
+
+\textbf{二、图卷积网络（GCN）半监督节点分类实践} \hfill \textbf{代码复现}\\
+\textit{一周} \hfill 最近
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{建模仿真}: 构建 200 节点的合成拓扑图，模拟高内聚、低耦合的非欧几里得（Non-Euclidean）社交网络结构。
+    \item \textbf{半监督学习}: 在仅提供 \textbf{5\% 标注数据} 的极端条件下，利用 GCN 的邻域聚合算子实现监督信号在图拓扑中的有效传播。
+    \item \textbf{可视化分析}: 使用 \textbf{t-SNE} 技术将高维节点表征降维至 2D 空间，验证了模型在隐空间中的聚类一致性，并改变标注数据占比多次实验
+\end{itemize}
+
+\textbf{三、豆瓣电影 Top 250 数据采集与分析系统} \hfill  \\
+\textit{一个月} \hfill 2025.01 -- 2025.02
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{数据采集}: 使用 \texttt{Requests} 构建异步爬虫，采用 \textbf{UA 伪装与随机延时} 策略规避反爬限制，稳定抓取 250 条核心电影数据。
+    \item \textbf{数据清洗}: 利用 \textbf{Pandas} 对非结构化 HTML 文本进行去噪与标准化，构建了包含年份、评分、短评等多维特征的结构化数据库。
+    \item \textbf{多维可视化}: 绘制评分分布直方图与年份趋势折线图，揭示了经典影视作品的年代分布规律及统计特征。
+\end{itemize}
+
+\textbf{四、基于fischertechnik的智能车搭建} \hfill  \\
+\textit{三周} \hfill 
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{核心实现}: 自己组装机械，并设计代码进行实验
+    \item \textbf{工程优化}: 解决机械臂不灵活问题，针对运动速度不高的问题将履带更换为轮胎
+\end{itemize}
+
+% --- 自我评价 ---
+\section{自我评价}
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt]
+    \item 我很自信，很乐观 ，学习能力很强
+    \item 我擅长团队协作，与人沟通
+    \item 想要了解未来就业状况，提升自己
+\end{itemize}
+
+\section{备注}
+以上的项目代码可以在Github个人主页中找到\href{https://github.com/fisher-yu-like}{github.com/fisher-yu-like}
+\end{document}

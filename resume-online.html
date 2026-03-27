@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙彧 - 个人简历</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ustc-blue: #004182;    /* 中科大标准色 */
+            --accent-blue: #0056b3;
+            --bg-gray: #f8f9fa;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans SC', sans-serif; background: var(--bg-gray); color: var(--text-dark); line-height: 1.6; }
+
+        .container { max-width: 950px; margin: 30px auto; background: #fff; display: flex; flex-wrap: wrap; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; }
+
+        /* 左侧边栏 */
+        aside { flex: 1 1 300px; background: var(--ustc-blue); color: #fff; padding: 40px 30px; }
+        .profile-section { text-align: center; margin-bottom: 30px; }
+        .name { font-size: 2.2rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 5px; }
+        .tagline { font-size: 1rem; opacity: 0.9; font-weight: 300; }
+
+        .contact-list { margin-top: 30px; }
+        .contact-item { margin-bottom: 15px; font-size: 0.9rem; display: flex; align-items: center; }
+        .contact-item span { margin-right: 10px; opacity: 0.8; }
+        .contact-item a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+
+        /* 右侧主内容 */
+        main { flex: 3 1 600px; padding: 50px; background: #fff; }
+        section { margin-bottom: 35px; }
+        h2 { color: var(--ustc-blue); font-size: 1.3rem; border-left: 4px solid var(--ustc-blue); padding-left: 15px; margin-bottom: 20px; text-transform: uppercase; }
+
+        .edu-item, .project-item { margin-bottom: 25px; }
+        .header-row { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 5px; flex-wrap: wrap; }
+        .sub-row { color: var(--accent-blue); font-size: 0.9rem; margin-bottom: 8px; font-weight: 500; }
+        
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag { background: #e9ecef; color: var(--ustc-blue); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+
+        ul.project-details { list-style: none; }
+        ul.project-details li { position: relative; padding-left: 18px; margin-bottom: 6px; font-size: 0.92rem; color: var(--text-light); }
+        ul.project-details li::before { content: "▹"; position: absolute; left: 0; color: var(--ustc-blue); font-weight: bold; }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .container { margin: 0; border-radius: 0; }
+            aside { padding: 30px; text-align: center; }
+            .contact-list { display: inline-block; text-align: left; }
+            main { padding: 30px 20px; }
+            .header-row span { display: block; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="profile-section">
+            <div class="name">孙 彧</div>
+            <div class="tagline">中国科学技术大学 · 自动化系</div>
+            <div style="font-size: 0.8rem; margin-top:10px; opacity:0.7;">生日：2007.03.03</div>
+        </div>
+
+        <div class="contact-list">
+            <div class="contact-item"><span>📍</span> 吉林省 洮南市</div>
+            <div class="contact-item"><span>📞</span> 132-5177-5028</div>
+            <div class="contact-item"><span>✉️</span> <a href="mailto:2055798256@qq.com">2055798256@qq.com</a></div>
+            <div class="contact-item"><span>🔗</span> <a href="https://github.com/fisher-yu-like">GitHub: fisher-yu-like</a></div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <h3 style="font-size: 1rem; margin-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:5px;">自我评价</h3>
+            <p style="font-size: 0.85rem; opacity: 0.9; line-height: 1.8;">
+                自信乐观，学习能力极强。擅长团队协作与高效沟通，勇于挑战底层原理复现，致力于在自动化与AI交叉领域深耕提升。
+            </p>
+        </div>
+    </aside>
+
+    <main>
+        <section>
+            <h2>教育背景</h2>
+            <div class="edu-item">
+                <div class="header-row">
+                    <span>中国科学技术大学 (USTC)</span>
+                    <span>2024.09 - 2028.06</span>
+                </div>
+                <div class="sub-row">自动化系 · 本科大二在读 | GPA: 3.0 / 4.0</div>
+                <p style="font-size: 0.85rem; color: var(--text-light);">
+                    <b>核心课程：</b>线性代数、数学分析、随机过程、数模电路、自控原理、英语六级(550+)
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>专业技能</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python/C++/MATLAB</span>
+                <span class="skill-tag">PyTorch (CNN/GCN)</span>
+                <span class="skill-tag">STM32/Arduino</span>
+                <span class="skill-tag">AutoCAD/PS/SW</span>
+                <span class="skill-tag">LaTeX/Markdown</span>
+                <span class="skill-tag">数据爬虫/可视化</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>项目经历</h2>
+            <div class="project-item">
+                <div class="header-row">
+                    <span>ResNet 论文复现</span>
+                    <span>深度学习</span>
+                </div>
+                <ul class="project-details">
+                    <li>底层构建 使用 PyTorch 自定义实现 Residual Block 模块，通过 Shortcut Connection 成功构建了 ResNet-18/34/50 不同层级的架构。</li>
+                    <li>引入 应用了 He Initialization 权重初始化和 Batch Normalization 技术，确保了深层训练的稳定性。</li>
+                    <li>在 CIFAR-10 数据集上进行实验，通过调优 Learning Rate Scheduler（如 Cosine Annealing）和数据增强，达到了与原论文一致的分类准确率。</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="header-row">
+                    <span>GCN 论文复现</span>
+                    <span>图神经网络</span>
+                </div>
+                <ul class="project-details">
+                    <li>实现了图拉普拉斯算子的重归一化技巧 (Renormalization Trick)，构建了核心的 $L = \tilde{D}^{-1/2} \tilde{A} \tilde{D}^{-1/2}$ 卷积层</li>
+                    <li>处理非结构化数据，利用邻接矩阵（Adjacency Matrix）和特征矩阵完成节点间的消息传递机制</li>
+                    <li>在 Cora /citeseer引用网络数据集上完成节点分类任务，实现了端到端的半监督学习流程。</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="header-row">
+                    <span>豆瓣电影 Top 250 采集分析系统</span>
+                    <span>数据工程</span>
+                </div>
+                <ul class="project-details">
+                    <li>基于 Requests 实现异步爬虫，采用 <b>UA伪装策略</b> 规避反爬，稳定抓取结构化数据。</li>
+                    <li>利用 Pandas 进行去噪处理，通过 Matplotlib 揭示影视作品的年代分布规律。</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="header-row">
+                    <span>基于 fischertechnik 的智能车搭建</span>
+                    <span>机器人/硬件</span>
+                </div>
+                <ul class="project-details">
+                    <li>自主设计机械结构并编写控制逻辑，通过更换轮胎与机械臂优化，提升运动灵活性。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="background: #f1f3f5; padding: 15px; border-radius: 8px;">
+            <p style="font-size: 0.85rem; text-align: center; color: var(--ustc-blue);">
+                🚀 项目代码已开源至 GitHub: <a href="https://github.com/fisher-yu-like" target="_blank" style="color: var(--ustc-blue); font-weight: bold;">fisher-yu-like</a>
+            </p>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
